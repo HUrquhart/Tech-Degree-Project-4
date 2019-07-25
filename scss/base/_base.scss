@@ -1,0 +1,19 @@
+// variables should be defined here but the assment says to place the variables in the utilities folder
+@import '../utilities/variables';
+*{
+  box-sizing: border-box;
+  /* @import from google  */
+  font-family: 'Lato', sans-serif;
+  color: $color-text;             
+}
+ul{
+  list-style:none;
+  padding-left: none;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+p{
+
+}

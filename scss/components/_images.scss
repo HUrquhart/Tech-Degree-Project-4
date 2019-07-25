@@ -1,0 +1,11 @@
+.img{
+  margin: 0 auto;
+  &--frame{
+    padding: 10px;
+    border: thin solid $color-text
+  }
+  &--avatar{
+    display: inherit; 
+    margin: 0 auto;
+  }
+} 
