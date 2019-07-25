@@ -16,10 +16,11 @@
   text-transform: uppercase;
   margin: 10px auto;
   @include breakpoint('md'){
-    
-    max-width: 18%;
-    margin: 0 1%;
-    display: inline-block;
+    &:not([type]){ // do not target tags with a type attribute as they are part of a form.
+      max-width: 18%;
+      margin: 0 1%;
+      display: inline-block;
+    }
     &:not(:first-child){
       // we need to remove a small left margin from all but the first element
       // this is due to whitspace

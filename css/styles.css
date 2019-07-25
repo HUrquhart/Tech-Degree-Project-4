@@ -373,7 +373,7 @@ a {
   margin: 10px auto;
 }
 @media (min-width: 768px) {
-  .btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
+  .btn--info:not([type]), .btn--warning:not([type]), .btn--error:not([type]), .btn--success:not([type]), .btn--default:not([type]) {
     max-width: 18%;
     margin: 0 1%;
     display: inline-block;
