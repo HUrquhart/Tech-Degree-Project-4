@@ -1,11 +1,17 @@
+[class^="img"]{
+  max-width: 100%;        // don't allow images to overflow the container
+  margin: 0 auto;         // override if not needed.
+  display: inline-block;
+  display: inherit;
+}
+
 .img{
-  margin: 0 auto;
   &--frame{
     padding: 10px;
-    border: thin solid $color-text
+    border: thin solid $color-text;
   }
   &--avatar{
-    display: inherit; 
-    margin: 0 auto;
+    // make sure the avatar image is actually round this allows us to use a bg img instead.
+    border-radius: 50%;
   }
 } 

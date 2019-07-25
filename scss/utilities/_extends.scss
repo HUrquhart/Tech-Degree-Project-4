@@ -1,6 +1,29 @@
 // big chunks of code to extend from
 %headline {
   margin: 2.75rem 0 1rem;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.15;
+}
+
+%btn{
+  // this is a placeholder for button styles to extend the buttons
+  font-weight: bold;
+  color: $white;
+  border: none;
+  border-radius: .5rem;
+  padding: 1rem;
+  width: 100%; // mobile size
+  text-transform: uppercase;
+  margin: 10px auto;
+  @include breakpoint('md'){
+    
+    max-width: 18%;
+    margin: 0 1%;
+    display: inline-block;
+    &:not(:first-child){
+      // we need to remove a small left margin from all but the first element
+      // this is due to whitspace
+      margin-left: -.2%;
+    }
+  }
 }

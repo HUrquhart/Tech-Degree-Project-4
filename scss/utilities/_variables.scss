@@ -9,6 +9,7 @@ $color-primary: #58e1c1; // turquoise-greenish
 $color-secondary: #51ddfc; // teal - blue - default
 
 $color-text: #aaaaaa;
+$white: #ffffff;
 
 $color-default: $color-secondary;
 $color-success: #63cc82;
@@ -18,7 +19,21 @@ $color-info: #927bc1;
 
 $container-width: 1100px;
 
-$breakpoint-xs: 575px;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
+$btns: (
+  "default": $color-default,
+  "success": $color-success,
+  "error"  : $color-error,
+  "warning": $color-warning,
+  "info"   : $color-info,
+ );
+
+
+
+$breakpoints: (
+  "xs": 575px, // less then this
+  "sm": 576px, // greater then ... all the following
+  "md": 768px,
+  "lg": 1024px,
+ );
+
+

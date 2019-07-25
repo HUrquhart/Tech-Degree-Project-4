@@ -17,7 +17,7 @@
     flex-direction: column;
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: $breakpoint-md) {
+    @include breakpoint('md') {
       flex-direction: row;
     }
   }
@@ -40,7 +40,7 @@
         flex-basis: 100%;
 
         // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: $breakpoint-md) {
+        @include breakpoint('md') {
 
           // base stlyes applied to all grid columns
           margin-top: 0;
@@ -58,9 +58,7 @@
   // grid__col + grid__col, targets two sibling columns
   & + & {
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: $breakpoint-md) {
-
+    @include breakpoint('md'){
       // add grid gutter
       margin-left: 10px;
     }
@@ -72,7 +70,7 @@
   margin: 0 auto;
 }
 .centered{
-  @media (min-width: $breakpoint-md){
+  @include breakpoint ('md'){
     margin: 0 auto;
   }
 }

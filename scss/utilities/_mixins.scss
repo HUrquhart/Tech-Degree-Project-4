@@ -1,0 +1,6 @@
+// use in place of the normal media queries
+@mixin breakpoint($breakpoint-size : 'md') {
+  @media (min-width: map-get($map: $breakpoints, $key: $breakpoint-size )){
+    @content;
+  }
+}

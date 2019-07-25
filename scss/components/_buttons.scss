@@ -1,0 +1,8 @@
+.btn{
+  @each $name, $color in $btns {
+    &--#{$name}{
+      @extend %btn;
+      background-color: $color;
+    }
+  }
+}
