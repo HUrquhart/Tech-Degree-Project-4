@@ -353,6 +353,7 @@ ul {
 
 p {
   text-align: left;
+  font-size: 1.125em;
 }
 
 a {
@@ -363,6 +364,7 @@ a {
 .headline--secondary, .headline--primary {
   margin: 2.75rem 0 1rem;
   line-height: 1.15;
+  width: 100%;
 }
 
 .btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
@@ -389,6 +391,10 @@ a {
 .grid__col--12, .grid__col--11, .grid__col--10, .grid__col--9, .grid__col--8, .grid__col--7, .grid__col--6, .grid__col--5, .grid__col--4, .grid__col--3, .grid__col--2, .grid__col--1 {
   margin-top: 10px;
   flex-basis: 100%;
+}
+
+.link, .blockquote, .headline--secondary, .headline--primary, ul, p, a {
+  text-align: left;
 }
 
 .grid__row {
@@ -634,10 +640,6 @@ a {
 .headline--secondary {
   font-size: 1em;
   font-weight: 100;
-}
-
-p {
-  font-size: 1.125em;
 }
 
 .blockquote {

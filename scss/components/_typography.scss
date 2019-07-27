@@ -5,8 +5,10 @@
 }
 
 .headline{
+  
   &--primary{
     @extend %headline;
+    @extend %base-typography;
     display: inline-block; // cant apply margin to inline elements 
     margin-top: 0;
     margin-left: .5em;
@@ -16,16 +18,15 @@
   }
   &--secondary{
     @extend %headline;
+    @extend %base-typography;
     font-size: 1em;
     font-weight: 100;
   }
 }
 
-p{
-  font-size: 1.125em;
-}
 
 .blockquote{
+  @extend %base-typography;
   font-size: 1.6em;
   line-height: 1.2;
   padding-left: 20px;
@@ -35,6 +36,7 @@ p{
   font-style: italic;
 }
 .link{
+  @extend %base-typography;
   color: $color-secondary;
   font-size: 1.1em;
   &:hover{
