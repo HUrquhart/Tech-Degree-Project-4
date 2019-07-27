@@ -14,12 +14,16 @@
   &__row {
     // padding: 1em 10px; // removed because a approach is invalid for mobile // look in container
     margin-bottom: 3em;
-    display: flex;
-    flex-direction: column;
 
-    @include breakpoint('md') {
-      flex-direction: row;
+    // replaced with mixin
+    @include flex($dir: column){
+      @include breakpoint('md') {
+        flex-direction: row;
+      }
     }
+   
+
+    
   }
 
   // .grid__col

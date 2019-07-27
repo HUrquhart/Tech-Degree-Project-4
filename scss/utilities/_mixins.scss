@@ -11,3 +11,9 @@
   }
   
 }
+
+@mixin flex($dir : null){
+  display: flex;
+  flex-direction: $dir;
+  @content;
+}

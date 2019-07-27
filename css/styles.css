@@ -393,7 +393,7 @@ a {
   flex-basis: 100%;
 }
 
-.link, .blockquote, .headline--secondary, .headline--primary, ul, p, a {
+.blockquote, .headline--secondary, .headline--primary, p {
   text-align: left;
 }
 
@@ -653,6 +653,7 @@ a {
 }
 
 .link {
+  text-align: center;
   color: #51ddfc;
   font-size: 1.1em;
 }

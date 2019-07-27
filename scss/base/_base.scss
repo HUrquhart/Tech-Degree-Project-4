@@ -11,19 +11,16 @@
   // outline: 1px solid tomato;
 }
 ul{
-  @extend %base-typography;
   list-style:none;
   padding: 0;
 }
 p{
   @extend %base-typography;
-  
   text-align: left;
   font-size: 1.125em;
 }
 
 a{
-  @extend %base-typography;
   text-decoration: none;
   font-weight: bold;
 

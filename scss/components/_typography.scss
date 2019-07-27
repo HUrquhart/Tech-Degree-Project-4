@@ -36,7 +36,7 @@
   font-style: italic;
 }
 .link{
-  @extend %base-typography;
+  text-align: center;
   color: $color-secondary;
   font-size: 1.1em;
   &:hover{
