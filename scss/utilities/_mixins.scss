@@ -1,6 +1,13 @@
 // use in place of the normal media queries
 @mixin breakpoint($breakpoint-size : 'md') {
-  @media (min-width: map-get($map: $breakpoints, $key: $breakpoint-size )){
-    @content;
+  @if($breakpoint-size != 'xs'){
+    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint-size )){
+      @content;
+    }
+  }@else{ // only runs if we declare xs anywerer we want a break point.
+    @media (max-width: map-get($map: $breakpoints, $key: $breakpoint-size )){
+      @content;
+    }
   }
+  
 }

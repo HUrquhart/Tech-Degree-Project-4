@@ -13,5 +13,6 @@
   &--avatar{
     // make sure the avatar image is actually round this allows us to use a bg img instead.
     border-radius: 50%;
+    margin-bottom: 40px;
   }
 } 

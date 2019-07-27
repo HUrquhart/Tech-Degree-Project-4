@@ -3,8 +3,10 @@
     &--#{$name}{
       @extend %btn;
       background-color: $color;
+      transition-duration: .3s;
+      &:hover{
+        background-color: darken($color, 10%);
+      }
     }
   }
 }
-
-// fix the form button as all other buttons become 18% at medium sizes

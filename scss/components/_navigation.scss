@@ -1,0 +1,50 @@
+[class="grid__row"]:first-child{
+  margin: 2em auto;
+}
+
+[role="navigation"]{
+  height: 100%;
+}
+.nav{
+  margin: 0 auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  @include breakpoint('md'){
+    display: flex;
+    height: 100%;
+  }
+}
+.nav__item{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  border-radius: .4em;
+  @include breakpoint('md'){
+    display: inline-block;
+    align-self: center;
+    
+    &:not(:last-child){
+      margin-left: 20px;
+    }
+    &:first-child{
+      margin-left: auto;
+    }
+  }
+  &:hover{
+    background-color: $color-secondary;
+    color: $white;
+    & > a{
+      color: white;
+    }
+  }
+  a{ // we need to make the entire li area clickable
+    padding: 0 20px;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+  }
+} 

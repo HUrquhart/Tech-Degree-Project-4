@@ -36,4 +36,19 @@ $breakpoints: (
   "lg": 1024px,
  );
 
+$column-colors: (
+   1 : lighten($color-primary, 10%),
+   2 : lighten($color-success, 10%),
+   3 : lighten($color-info, 10%),
+   4 : darken($color-default, 10%),
+   5 : darken($color-primary, 20%),
+   6 : darken($color-secondary, 20%),
+   7 : lighten($color-error, 10%),
+   8 : lighten($color-warning, 5%),
+   9 : darken($color-success, 33%),
+   10: darken($color-info, 33%),
+   11: darken($color-error, 33%),
+   12: $color-primary,
+);
+
 

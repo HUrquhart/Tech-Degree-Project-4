@@ -12,11 +12,11 @@
 
   // .grid__row
   &__row {
-    padding: 1em 10px;
+    // padding: 1em 10px; // removed because a approach is invalid for mobile // look in container
+    margin-bottom: 3em;
     display: flex;
     flex-direction: column;
 
-    // NOTE: replace with media query mixin if aiming for exceeds
     @include breakpoint('md') {
       flex-direction: row;
     }
@@ -28,36 +28,35 @@
     // create grid columns dynamically
     // loop through each column size
     @for $i from 1 through 12 {
-
-      // concatenate CSS selector, ie when $i = 1,
-      // selector would be .grid__col--1
       &--#{$i} {
+        // every column is centered accroding to the design // a p tag will reset this
+        text-align: left; 
 
-        // base styles applied to all grid columns 
-        // NOTE: could be converted to a placeholder, along with margin
-        // from the  media query
-        margin-top: 10px;
-        flex-basis: 100%;
+        // each columns gets a color based on width as long as it is using the theme__colors selector too
+        &.theme__colors{
+          background-color: map-get($column-colors, $i );
+          color: $white;
+          padding: 10px;
+          border-radius: .5em;
+        }
 
-        // NOTE: replace with media query mixin if aiming for exceeds
+        @extend %col;
         @include breakpoint('md') {
-
+          text-align: center;
           // base stlyes applied to all grid columns
           margin-top: 0;
-
           // make column width a percentage of the column number / total columns
           flex-basis: #{$i / 12 * 100 + "%"} ;
         }
       }
     }
   }
-}
+} 
 
 // targets all elements with classes that begin with grid__col
 [class^=grid__col] {
   // grid__col + grid__col, targets two sibling columns
   & + & {
-
     @include breakpoint('md'){
       // add grid gutter
       margin-left: 10px;
@@ -68,6 +67,10 @@
 .container{
   max-width: $container-width;
   margin: 0 auto;
+  padding: 0 1em;
+  @include breakpoint('xs'){
+    max-width: 100%;
+  }
 }
 .centered{
   @include breakpoint ('md'){
